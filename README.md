@@ -17,7 +17,7 @@ IMCSH is a minimal shell written in C for educational purposes. It supports exec
   - **Example**: `exec ls -l &`
   - Does not wait. When it finishes, it prints its PID automatically.
 - **globalusage**:
-  - Prints `IMCSH Version 1.1 created by <author(s)>`.
+  - Prints `IMCSH Version 1.1 created by Samolet0489`.
   - Can be redirected using the `>` operator.
 - **Output Redirection**:
   - **Syntax**: `[command] > filename`
@@ -68,7 +68,7 @@ Process with PID 12345 finished
 youruser@yourhost> exec ls -l > mylist.txt
 Process with PID 12346 finished
 youruser@yourhost> globalusage
-IMCSH Version 1.1 created by <author(s)>
+IMCSH Version 1.1 created by Samolet0489
 youruser@yourhost> exec sleep 10 &
 youruser@yourhost> quit
 The following processes are running, are you sure you want to quit? [Y/n]

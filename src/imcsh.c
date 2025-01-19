@@ -33,7 +33,7 @@ static int bgCount = 0;
 
 
 /* Version info string */
-const char *IMCSH_VERSION = "IMCSH Version 1.1 created by <author(s)>";
+const char *IMCSH_VERSION = "IMCSH Version 1.1 created by Samolet0489";
 
 
 /* Forward declarations */
