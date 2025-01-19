@@ -110,10 +110,11 @@ int main(void)
             break;
         }
 
-        /* Strip trailing newline if present */
+        /* Strip trailing newline/carriage returns */
         size_t len = strlen(input_line);
-        if (len > 0 && input_line[len - 1] == '\n') {
+        while (len > 0 && (input_line[len - 1] == '\r' || input_line[len - 1] == '\n')) {
             input_line[len - 1] = '\0';
+            len--;
         }
 
         /* Parse input into tokens */
@@ -133,9 +134,8 @@ int main(void)
         else if (strcmp(tokens[0], "exec") == 0) {
             handle_exec(tokens, num_tokens);
         }
-
-        else if (strcmp(tokens[0], "exec") == 0){
-            handle_exec(tokens, num_tokens);
+        else if (strcmp(tokens[0], "globalusage") == 0) {
+            handle_globalusage(tokens, num_tokens);
         }
         else {
             fprintf(stderr, "Unknown command: %s\n", tokens[0]);
@@ -285,7 +285,7 @@ void handle_globalusage(char **tokens, int  num_tokens)
         printf("%s\n", IMCSH_VERSION);
     } else {
         // redirect outout to filename
-        int fd = open(filename, O_WRONLY | O_CREAT | O_ACCMODE, 0666);
+        int fd = open(filename, O_WRONLY | O_CREAT | O_APPEND, 0666);
         if (fd < 0)
         {
             perror("open");

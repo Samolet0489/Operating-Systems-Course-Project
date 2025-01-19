@@ -2,7 +2,9 @@
 *.d
 
 # the file that we generate.
-imcsh
+src/imcsh
+src/directory_output.txt
+src/usage.txt
 
 # Object files
 *.o
