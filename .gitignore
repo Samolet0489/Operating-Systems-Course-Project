@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# the file that we generate.
+imcsh
+
 # Object files
 *.o
 *.ko
