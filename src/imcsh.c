@@ -15,7 +15,7 @@
 
 
 /*
- * IMCSH Version 1.1 created by <author(s)>
+ * IMCSH Version 1.1 created by Samolet0489>
  *
  * Features:
  * 1) exec <program> [args]
