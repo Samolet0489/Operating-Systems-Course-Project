@@ -85,4 +85,4 @@ If you type `Y`, the shell kills the background process and exits.
 
 ## Author(s)
 
-- `<Author Name(s)>`
+- `Samolet0489 and madarasibalazs`
