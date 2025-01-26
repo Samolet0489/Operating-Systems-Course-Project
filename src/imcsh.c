@@ -15,7 +15,7 @@
 
 
 /*
- * IMCSH Version 1.1 created by Samolet0489>
+ * IMCSH Version 1.1 created by Samolet0489 and madarasibalazs
  *
  * Features:
  * 1) exec <program> [args]
@@ -33,7 +33,7 @@ static int bgCount = 0;
 
 
 /* Version info string */
-const char *IMCSH_VERSION = "IMCSH Version 1.1 created by Samolet0489";
+const char *IMCSH_VERSION = "IMCSH Version 1.1 created by Samolet0489 and madarasibalazs";
 
 
 /* Forward declarations */
@@ -56,7 +56,7 @@ void sigchld_handler(int sig)
 
     while ((pid = waitpid(-1, &status, WNOHANG)) > 0) {
         // Printt PID of the finished background process
-        printf("Process with PID %d finished\n", pid);
+        printf("\nProcess with PID %d finished\n", pid);
         remove_bg_pid(pid);
     }
 }
